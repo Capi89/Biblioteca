@@ -104,6 +104,7 @@ public class ModeloBiblio {
                 css.executeUpdate();
                 devolver = "Libro devuelto exitosamente.";
             }
+            accesoDB.close();
         }catch(Exception e){
             
         }
@@ -128,6 +129,7 @@ public class ModeloBiblio {
                 // SendMail(mail);
                 rptaRegistro = "Registro exitoso.";
             }
+            accesoDB.close();
         } catch (Exception e){
         }
          return rptaRegistro;
@@ -153,6 +155,7 @@ public class ModeloBiblio {
                 libros.setAlquilado(rs.getString(9));
                 listaLibros.add(libros);
             }
+            acceDB.close();
         } catch (Exception e){
         }
         return listaLibros;
@@ -180,6 +183,7 @@ public class ModeloBiblio {
                libros.setAlquilado(rs.getString(9));
                listaLibros.add(libros);
            }
+           acceDB.close();
        }
        catch (Exception e){
        }
